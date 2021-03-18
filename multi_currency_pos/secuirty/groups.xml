@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+
+
+        <record id="close_session_validation" model="res.groups">
+            <field name="name">Close Session</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+
+
+
+    </data>
+</odoo>
