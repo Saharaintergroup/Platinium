@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="assets_for_cheque_information" inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+        	<script type="text/javascript" src="/multi_currency_pos/static/src/js/Popups/ChequePopUp.js"/>
+            <script type="text/javascript" src="/multi_currency_pos/static/src/js/pos.js"/>
+            <script type="text/javascript" src="/multi_currency_pos/static/src/js/new_paymentscreen.js"/>
+        </xpath>
+    </template>
+</odoo>

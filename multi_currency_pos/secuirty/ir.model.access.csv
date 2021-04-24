@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_payment_provider,access.payment.provider,model_payment_provider,base.group_user,1,1,1,1
+access_payment_terminal,access.payment.terminal,model_payment_terminal,base.group_user,1,1,1,1
+access_account_cash_rounding_manager,account.cash.rounding.user,account.model_account_cash_rounding,base.group_user,1,1,1,1

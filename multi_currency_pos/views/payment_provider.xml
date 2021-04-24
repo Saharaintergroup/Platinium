@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="payment_provider_view_form" model="ir.ui.view">
+            <field name="name">payment_provider_view_form</field>
+            <field name="model">payment.provider</field>
+            <field name="arch" type="xml">
+                <form string="Payment Terminal">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="payment_provider_view_tree" model="ir.ui.view">
+            <field name="name">payment_provider_view_tree</field>
+            <field name="model">payment.provider</field>
+            <field name="arch" type="xml">
+                <tree string="Payment Provider">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="payment_provider_action" model="ir.actions.act_window">
+            <field name="name">Payment Provider</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">payment.provider</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+<!--        <menuitem id="payment_provider_categ"-->
+<!--                  name="Payment Provider"-->
+<!--                  parent="point_of_sale.menu_point_config_product"-->
+<!--                  action="payment_provider_action"-->
+<!--                  sequence="3"/>-->
+    
+    </data>
+</odoo>
