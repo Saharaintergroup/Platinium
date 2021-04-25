@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+        <record id="inherit_closed_session" model="ir.ui.view">
+            <field name="name">inherit_closed_session</field>
+            <field name="model">pos.session</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_session_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//header" position="inside">
+                    <button name="check_status" type="object" string="Close" states="opened,closing_control"/>
+                </xpath>
+
+            </field>
+        </record>
+  </data>
+</odoo>
