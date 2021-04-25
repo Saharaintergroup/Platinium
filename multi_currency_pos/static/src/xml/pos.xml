@@ -9,7 +9,7 @@
 						<t t-esc="line.payment_method.currency_symbol" />
 					</div>
         			<div class="second-currency">
-        				<t t-esc="(line.payment_method.currency_rate*formatLineAmount(line))"/>
+        				<t t-esc="(line.payment_method.currency_rate) * (line.get_amount())"/>
         			</div>
 
         		</t>

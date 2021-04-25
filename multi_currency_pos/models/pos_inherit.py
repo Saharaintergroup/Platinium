@@ -64,7 +64,7 @@ class AccountJournal(models.Model):
     require_customer = fields.Boolean(
         string=' Require Customer', )
     currency_id = fields.Many2one('res.currency',"Currency")
-    currency_rate = fields.Float("Currency Rate",digits=(5, 1),compute="_get_currency_rate",store=True)
+    currency_rate = fields.Float("Currency Rate",digits=(6, 1),compute="_get_currency_rate",store=True)
     currency_symbol = fields.Char("Currency Symbol",related="currency_id.symbol")
 
     @api.depends('currency_id.rate')
