@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- sale.order.kit inherit form view -->
+<record id="product_kit.sale_order_kit_ref_view_form" model="ir.ui.view">
+    <field name="name">sale.order.kit.inherit.view.form</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/tree[1]/field[@name='product_id']" position="after">
+              <field name="kit_ref" invisible="1"/>
+              <field name="origin_order_line" invisible="1"/>
+            </xpath>
+          </data>
+    </field>
+</record>
+</odoo>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- product.product inherit form view -->
+    <record id="product_kit.product_product_kit_component_view_form" model="ir.ui.view">
+        <field name="name">product.product.inherit.view.form</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="///field[@name='type']" position="after">
+                    <field name="is_kit" attrs="{'invisible': [('type','!=','service')]}"/>
+                    <field name="pricing_kit_type"  attrs="{'invisible': ['|',('type','!=','service'),('is_kit','=',False)]}"/>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Kit Component" name="kit_components" attrs="{'invisible': [('is_kit','=',False)]}">
+                        <group name="kit_components" string="Components">
+                            <field name="product_component_ids" nolabel="1">
+                                <tree editable="top">
+                                    <field name="company_id" invisible="1"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="product_component_id"/>
+                                    <field name="quantity"/>
+                                    <field name="uom_id"/>
+                                    <field name="price_unit"/>
+                                    <field name="price_subtotal" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total"/>
+
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </xpath>
+            </data>
+
+
+        </field>
+    </record>
+
+    <!-- product.template inherit form view -->
+    <record id="product_kit.product_tmpl_kit_component_view_form" model="ir.ui.view">
+        <field name="name">product.template.inherit.view.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <data>
+<!--                <xpath expr="///field[@name='type']" position="after">-->
+<!--                    <field name="is_kit" attrs="{'invisible': [('type','!=','service')]}"/>-->
+<!--                    <field name="pricing_kit_type"  attrs="{'invisible': ['|',('type','!=','service'),('is_kit','=',False)]}"/>-->
+<!--                </xpath>-->
+                <xpath expr="//notebook" position="inside">
+                    <page string="Kit Component" name="kit_components" attrs="{'invisible': [('is_kit','=',False)]}">
+                        <group name="kit_components" string="Components">
+                            <field name="product_component_ids" nolabel="1">
+                                <tree editable="top">
+                                    <field name="company_id" invisible="1"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="product_component_id"/>
+                                    <field name="quantity"/>
+                                    <field name="uom_id"/>
+                                    <field name="price_unit"/>
+                                    <field name="price_subtotal" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total"/>
+
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+
+</odoo>
