@@ -47,6 +47,10 @@
 <!--                    <field name="is_kit" attrs="{'invisible': [('type','!=','service')]}"/>-->
 <!--                    <field name="pricing_kit_type"  attrs="{'invisible': ['|',('type','!=','service'),('is_kit','=',False)]}"/>-->
 <!--                </xpath>-->
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="is_kit" attrs="{'invisible': [('type','!=','service')]}"/>
+                    <field name="pricing_kit_type" attrs="{'invisible': ['|',('type','!=','service'),('is_kit','=',False)]}"/>
+                </xpath>
                 <xpath expr="//notebook" position="inside">
                     <page string="Kit Component" name="kit_components" attrs="{'invisible': [('is_kit','=',False)]}">
                         <group name="kit_components" string="Components">

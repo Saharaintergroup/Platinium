@@ -23,7 +23,7 @@
         'views/templates.xml',
         'views/forms/product_product.xml',
         'views/forms/sale_order.xml',
-        'views/forms/product_template.xml',
+        # 'views/forms/product_template.xml',
     ],
     'demo': [
         'demo/demo.xml',
