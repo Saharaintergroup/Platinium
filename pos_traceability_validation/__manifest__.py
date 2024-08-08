@@ -21,7 +21,7 @@
 
 {
     'name': 'POS Serial Number Validator',
-    'version': '13.0.1.0.1',
+    'version': '17.0.1.0.4',
     'author': 'Cybrosys Techno Solutions',
     'company': 'Cybrosys Techno Solutions',
     'website': 'https://www.cybrosys.com',
