@@ -3,7 +3,7 @@
     "name": "Hide cost price, product",
     "summary": "Hide cost price, hide standard price, hide product price, hide product cost price",
     "description": "The cost price can only be accessed through Access Group.",
-    "version": "14.0.1",
+    'version': '17.0.1.0.4',
     "category": "Access Right",
     
     # "price": 2.99,
