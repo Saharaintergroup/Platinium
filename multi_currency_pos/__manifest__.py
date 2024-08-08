@@ -3,7 +3,7 @@
 {
     "name": "Multi Currency POS",
     "author": "Edge Technologies",
-    "version": "14.0.1.0",
+    'version': '17.0.1.0.4',
     "live_test_url": 'https://youtu.be/vJbpPbuiYbo',
     "images": ["static/description/main_screenshot.png"],
     'summary': 'POS check pos check information on POS Cheque Information on point of sale cheque details point of sale check print Cheque Information on the Receipt in POS print cheque number on pos receipt check info pos receipt cheque info pos payment with cheque info',
