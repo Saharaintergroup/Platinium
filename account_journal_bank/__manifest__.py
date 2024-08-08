@@ -2,7 +2,7 @@
 
 {
     "name": "Account Journal Bank",
-    "version": "14.0.1.0",
+    'version': '17.0.1.0.4',
     "license": "OPL-1",
     "depends": ['base', 'point_of_sale', 'pos_hr', 'account'],
     "data": [
